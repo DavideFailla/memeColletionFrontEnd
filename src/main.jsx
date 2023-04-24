@@ -5,7 +5,8 @@ import {
   RouterProvider,
   createBrowserRouter 
 } from 'react-router-dom'
-import {Authenticate} from './api';
+import Login from './components/login'
+
 
 const router = createBrowserRouter([
   
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
       {
         children: [
           {
-            path: "/authenticate",
-            element: <Authenticate/>
+            path: "/login",
+            element: <Login/>
           },
         ]
       }
