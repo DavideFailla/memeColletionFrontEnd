@@ -8,6 +8,7 @@ import {
 import Login from './components/login'
 import Register from './components/register'
 import Pack from './components/pack'
+import Albums from './components/albums'
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
           {
             path: "/pack",
             element: <Pack/>
+          },
+          {
+            path : "/albums",
+            element : <Albums/>
           }
         ]
       }

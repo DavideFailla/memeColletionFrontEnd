@@ -1,4 +1,4 @@
-import { createPack, players } from "../api"
+import { createPack} from "../api"
 
 export default function Pack(){
 

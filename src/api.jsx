@@ -1,4 +1,5 @@
 import axios from "axios";
+import showAlbum from "./components/showAlbum";
 
 export const authenticate = async (email, password) => {
     const response = await axios.post('http://localhost:8080/api/auth/authenticate',
@@ -22,26 +23,28 @@ export const register = async (firstname, lastname, dob, email, password, nickna
     localStorage.setItem("token",response.data.access_token);
 };
 
-export const createPack = async (edition) => {
+export const createPack = async (stringPackEdition) => {
     const response = await axios.post('http://localhost:8080/api/players/createPack',{
-        "edition" : `${edition}`,
     },
     {
-        "Access-Control-Allow-Origin" : "http://localhost:8080",
-        withCredentials: true,
         headers: {
             Authorization : `Bearer ${localStorage.getItem("token")}`,
         },
-    }
-    );
+        params: {
+            stringPackEdition : stringPackEdition,
+        }
+    });
+    console.log(response.data);
 };
 
-
-export const players = async() => {
-    fetch('http://localhost:8080/api/players/findAllPlayers', {
-    headers: {Authentication: `Bearer ${localStorage.getItem("token")}`}
-})
-   .then(resp => resp.json())
-   .then(json => console.log(JSON.stringify(json)))
+export const getAlbum = async (albumEdition) => {
+    const response = await axios.get('http://localhost:8080/api/cards/showAlbum',{
+        headers:{
+            Authorization : `Bearer ${localStorage.getItem("token")}`,
+        },
+        params: {
+            albumEdition : albumEdition,
+        }
+    });
+    showAlbum(response.data);
 }
-
