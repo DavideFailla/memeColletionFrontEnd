@@ -2,9 +2,6 @@ import { Form } from "react-router-dom";
 import { authenticate } from "../api";
 import { useState } from "react";
 
-
-
-
 export default function Login(){
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
