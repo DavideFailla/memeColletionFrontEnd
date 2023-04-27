@@ -13,6 +13,10 @@ import Albums from './components/albums'
 import Root from './components/root'
 import Home from './components/home'
 import ContactUs from './components/contactUs'
+import Duplicates from './components/duplicates'
+import OgAlbum from './components/ogAlbum'
+import GenZAlbum from './components/genZAlbum'
+
 
 
 const router = createBrowserRouter([
@@ -42,9 +46,23 @@ const router = createBrowserRouter([
         element: <ContactUs />
       },
       {
+        path: "/duplicates",
+        element: <Duplicates/>
+      },
+      {
         path: "/albums",
-        element: <Albums />
-      }
+        element: <Albums />,
+        children: [
+          {
+            path: "/albums/og",
+            element: <OgAlbum />
+          },
+          {
+            path: "/albums/gen-z",
+            element: <GenZAlbum />
+          }, 
+        ],
+      },
     ],
 
   },

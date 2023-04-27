@@ -1,5 +1,6 @@
 import axios from "axios";
 import showAlbum from "./components/showAlbum";
+import showDuplicates from "./components/showDuplicates";
 
 export const authenticate = async (email, password) => {
     const response = await axios.post('http://localhost:8080/api/auth/authenticate',
@@ -47,4 +48,16 @@ export const getAlbum = async (albumEdition) => {
         }
     });
     showAlbum(response.data);
+    
+}
+
+export const getDuplicates = async () => {
+    const response = await axios.get('http://localhost:8080/api/cards/findInDuplicates',{
+        headers:{
+            Authorization : `Bearer ${localStorage.getItem("token")}`,
+        }
+    });
+    showDuplicates(response.data);
+    
+    
 }

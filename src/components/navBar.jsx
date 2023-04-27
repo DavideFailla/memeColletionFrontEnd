@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { getDuplicates } from "../api";
 
 export default function NavBar(){
   return (
@@ -28,9 +29,9 @@ export default function NavBar(){
               }
             >ALBUM</NavLink>
           </li>
-          <li>
+          <li onClick={getDuplicates}>
             <NavLink
-              to="/albums"
+              to="/duplicates"
               className={({ isActive, isPending }) =>
                 isActive
                   ? "active"
