@@ -10,34 +10,44 @@ import Register from './components/register'
 import Pack from './components/pack'
 import Albums from './components/albums'
 
+import Root from './components/root'
+import Home from './components/home'
+import ContactUs from './components/contactUs'
+
 
 const router = createBrowserRouter([
-  
+
   {
     path: "/",
-    children:[
+    element: <Root />,
+    children: [
       {
-        children: [
-          {
-            path: "/login",
-            element: <Login/>
-          },
-          {
-            path: "/register",
-            element: <Register/>
-          },
-          {
-            path: "/pack",
-            element: <Pack/>
-          },
-          {
-            path : "/albums",
-            element : <Albums/>
-          }
-        ]
+        path: "/home",
+        element: <Home />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/register",
+        element: <Register />
+      },
+      {
+        path: "/pack",
+        element: <Pack />
+      },
+      {
+        path: "/contacts",
+        element: <ContactUs />
+      },
+      {
+        path: "/albums",
+        element: <Albums />
       }
-    ], 
-  }
+    ],
+
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
