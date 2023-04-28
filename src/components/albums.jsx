@@ -1,11 +1,12 @@
 import { getAlbum } from "../api"
-import showAlbum from "./showAlbum";
+import ShowAlbum from "./showCard";
+import showAlbum from "./showCard";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Albums(){
 
-    function ogAlbum(){
-        const results = getAlbum("OG");
+    async function ogAlbum(){
+        getAlbum("OG");
     }
 
     function gen_zAlbum(){
@@ -16,10 +17,10 @@ export default function Albums(){
         <>
         <div>
             <button type="button" onClick={ogAlbum}>
-                <NavLink to ="/albums/og">Album OG</NavLink>
+            <NavLink to ="/albums/OG">Album OG</NavLink>
             </button>
             <button type="button" onClick={gen_zAlbum}>
-            <NavLink to ="/albums/gen-z">Album GENZ</NavLink>
+            <NavLink to ="/albums/GEN_Z">Album GENZ</NavLink>
             </button>
         </div>
         <div>

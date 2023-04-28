@@ -8,14 +8,16 @@ import {
 import Login from './components/login'
 import Register from './components/register'
 import Pack from './components/pack'
-import Albums from './components/albums'
 
 import Root from './components/root'
 import Home from './components/home'
 import ContactUs from './components/contactUs'
 import Duplicates from './components/duplicates'
-import OgAlbum from './components/ogAlbum'
-import GenZAlbum from './components/genZAlbum'
+import ShowAlbum from './components/showCard'
+import Album, {
+  albumLoader
+} from './components/Album'
+import Albums from './components/albums'
 
 
 
@@ -54,13 +56,10 @@ const router = createBrowserRouter([
         element: <Albums />,
         children: [
           {
-            path: "/albums/og",
-            element: <OgAlbum />
+            path: "/albums/:edition",
+            element: <Album />,
+            loader: albumLoader,
           },
-          {
-            path: "/albums/gen-z",
-            element: <GenZAlbum />
-          }, 
         ],
       },
     ],

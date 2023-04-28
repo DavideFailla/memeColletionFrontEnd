@@ -1,5 +1,5 @@
 import axios from "axios";
-import showAlbum from "./components/showAlbum";
+import ShowAlbum from "./components/showCard";
 import showDuplicates from "./components/showDuplicates";
 
 export const authenticate = async (email, password) => {
@@ -39,7 +39,7 @@ export const createPack = async (stringPackEdition) => {
 };
 
 export const getAlbum = async (albumEdition) => {
-    const response = await axios.get('http://localhost:8080/api/cards/showAlbum',{
+    const response = await axios.get('http://localhost:8080/api/cards/album',{
         headers:{
             Authorization : `Bearer ${localStorage.getItem("token")}`,
         },
@@ -47,8 +47,7 @@ export const getAlbum = async (albumEdition) => {
             albumEdition : albumEdition,
         }
     });
-    showAlbum(response.data);
-    
+    return response.data;
 }
 
 export const getDuplicates = async () => {
