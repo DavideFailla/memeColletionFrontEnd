@@ -14,7 +14,7 @@ export default function ContactUs(){
     }
 
     return(
-        <Form>
+        <Form id="contact-form">
             <label>Inserisci la tua Email</label>
             <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}></input>
             <label>Inserisci il tuo messaggio</label>

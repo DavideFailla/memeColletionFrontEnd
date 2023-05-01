@@ -1,22 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { getDuplicates } from "../api";
+
 
 export default function NavBar(){
   return (
     <>
-      <nav>
-          <NavLink
-              to="/home"
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? "active"
-                  : isPending
-                    ? "pending"
-                    : ""
-              }
-            ><img src="" alt="logo" />
-            </NavLink>
-        <ul> 
+      <nav id="nav-bar">
+        <ul>
           <li>
             <NavLink
               to="/albums"
@@ -66,16 +56,6 @@ export default function NavBar(){
             >CONTATTACI</NavLink>
           </li>
         </ul>
-        <NavLink
-              to="/login"
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? "active"
-                  : isPending
-                    ? "pending"
-                    : ""
-              }
-            >LOGOUT</NavLink>
       </nav>
     </>
   );

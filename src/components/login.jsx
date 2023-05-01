@@ -20,14 +20,16 @@ export default function Login(){
     }
 
     return(
-        <Form onSubmit={handleSubmit}>
-            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}>
+        <Form onSubmit={handleSubmit} >
+            
+            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail} className="login-form">
             </input>
-            <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword}>
+            <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword} className="login-form">
             </input>
             <button 
             type="submit"
-            >Conferma</button>
+            id="login-button">Conferma</button>
+            
         </Form>
     )
 }

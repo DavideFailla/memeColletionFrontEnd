@@ -15,11 +15,11 @@ export default function Albums(){
 
     return(
         <>
-        <div>
-            <button type="button" onClick={ogAlbum}>
+        <div >
+            <button type="button" onClick={ogAlbum} className="albums-button">
             <NavLink to ="/albums/OG">Album OG</NavLink>
             </button>
-            <button type="button" onClick={gen_zAlbum}>
+            <button type="button" onClick={gen_zAlbum} className="albums-button">
             <NavLink to ="/albums/GEN_Z">Album GENZ</NavLink>
             </button>
         </div>
