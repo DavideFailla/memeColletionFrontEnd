@@ -13,11 +13,11 @@ export default function Pack(){
     return(
 
         <div>
-            <button type="button" className="og-pack" onClick={ogPack}>
-                pacchetto OG
+            <button type="button" className="pack-button" onClick={ogPack}>
+                 OG PACK
             </button>
-            <button type="button" className="genz-pack" onClick={genZPack}>
-                pacchetto GEN_Z
+            <button type="button" className="pack-button" onClick={genZPack}>
+                 GEN_Z PACK
             </button>
         </div>
     )

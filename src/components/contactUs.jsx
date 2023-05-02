@@ -19,7 +19,7 @@ export default function ContactUs(){
             <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}></input>
             <label>Inserisci il tuo messaggio</label>
             <input type="text" placeholder="Scrivi il tuo messaggio" value={text} onChange={changeText}></input>
-            <button type="submit">Conferma</button>
+            <button type="submit" id="contact-button">Conferma</button>
         </Form>
     )
 }

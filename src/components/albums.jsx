@@ -17,10 +17,10 @@ export default function Albums(){
         <>
         <div >
             <button type="button" onClick={ogAlbum} className="albums-button">
-            <NavLink to ="/albums/OG">Album OG</NavLink>
+            <NavLink to ="/albums/OG">OG ALBUM</NavLink>
             </button>
             <button type="button" onClick={gen_zAlbum} className="albums-button">
-            <NavLink to ="/albums/GEN_Z">Album GENZ</NavLink>
+            <NavLink to ="/albums/GEN_Z">GEN_Z ALBUM</NavLink>
             </button>
         </div>
         <div>
