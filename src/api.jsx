@@ -23,7 +23,7 @@ export const register = async (firstname, lastname, dob, email, password, nickna
 };
 
 export const createPack = async (stringPackEdition, stringPackCost) => {
-    const response = await axios.post('http://localhost:8080/api/players/createPack',{
+    const response = await axios.post('http://localhost:8080/api/players/pack',{
     },
     {
         headers: {
