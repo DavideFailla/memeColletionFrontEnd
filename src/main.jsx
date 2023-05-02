@@ -12,12 +12,13 @@ import Pack from './components/pack'
 import Root from './components/root'
 import Home from './components/home'
 import ContactUs from './components/contactUs'
-import Duplicates from './components/duplicates'
+import Duplicates, { duplicateLoader } from './components/duplicates'
 import ShowAlbum from './components/showCard'
 import Album, {
   albumLoader
 } from './components/Album'
 import Albums from './components/albums'
+import ErrorPage from './components/error-page'
 
 
 
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement : <ErrorPage />,
     children: [
       {
         path: "/home",
@@ -49,7 +51,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/duplicates",
-        element: <Duplicates/>
+        element: <Duplicates/>,
+        loader : duplicateLoader,
+        errorElement : <div>Non ci sono duplicati!</div>
       },
       {
         path: "/albums",
@@ -59,6 +63,7 @@ const router = createBrowserRouter([
             path: "/albums/:edition",
             element: <Album />,
             loader: albumLoader,
+            errorElement : <div>Album vuoto!</div>
           },
         ],
       },

@@ -3,11 +3,11 @@ import { createPack} from "../api"
 export default function Pack(){
 
     function ogPack(){
-        createPack("OG");
+        createPack("OG", "150");
     }
 
     function genZPack(){
-        createPack("GEN_Z");
+        createPack("GEN_Z", "150");
     }
 
     return(

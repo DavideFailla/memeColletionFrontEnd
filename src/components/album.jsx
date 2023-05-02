@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { getAlbum } from "../api";
 import ShowCard from "./showCard"
+import EmptyAlbum from "./error-page";
 
 export async function albumLoader({ params }) {
     const cards = await getAlbum(params.edition);
@@ -11,7 +12,7 @@ export async function albumLoader({ params }) {
 export default function Album(){
     const {cards} = useLoaderData();
     const results = cards.map((card) =>
-        <ShowCard key={card.id} card = {card}> </ShowCard>
+    <ShowCard key={card.id} card = {card}> </ShowCard>
     );
     return (
         <div>
