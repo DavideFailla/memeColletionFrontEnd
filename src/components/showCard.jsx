@@ -1,9 +1,8 @@
 export default function ShowCard({card}){
    return(
       <div className="card-meme">
-         <img id="meme" alt="immagine" src={"./src/images/logo.png"}/>
+        <img id="meme" alt="immagine" src={`/memeImage/${card.name}.png`}/>
       </div>
-    
    ) 
 }
 

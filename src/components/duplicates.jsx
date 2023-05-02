@@ -9,7 +9,6 @@ export async function duplicateLoader(){
 
 export default function Duplicates(){
     const {cards} = useLoaderData();
-    console.log(cards);
     const results = cards.map((card) =>
     <ShowCard key={card.id} card = {card}> </ShowCard>
     );

@@ -1,6 +1,4 @@
 import { getAlbum } from "../api"
-import ShowAlbum from "./showCard";
-import showAlbum from "./showCard";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Albums(){
@@ -10,7 +8,7 @@ export default function Albums(){
     }
 
     function gen_zAlbum(){
-        const results = getAlbum("GEN_Z");
+        getAlbum("GEN_Z");
     }
 
     return(

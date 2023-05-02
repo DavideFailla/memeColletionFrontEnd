@@ -34,7 +34,7 @@ export const createPack = async (stringPackEdition, stringPackCost) => {
             stringPackCost : stringPackCost,
         }
     });
-    console.log(response.data);
+    return response.data;
 };
 
 export const getAlbum = async (albumEdition) => {

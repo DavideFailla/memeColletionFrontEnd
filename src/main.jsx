@@ -57,11 +57,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/albums",
-        element: <Albums />,
+        element: <Albums/>,
+        errorElement : ErrorPage,
         children: [
           {
             path: "/albums/:edition",
-            element: <Album />,
+            element: <Album/>,
             loader: albumLoader,
             errorElement : <div>Album vuoto!</div>
           },

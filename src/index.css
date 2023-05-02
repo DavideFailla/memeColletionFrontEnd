@@ -86,11 +86,8 @@ button:focus-visible {
 
 .card-meme{
   display: inline-block;
-  background-color: rgb(39, 105, 162);
-  background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
+  margin-right: 20px;
+  margin-left: 50px;
 }
 
 #nav-bar{
@@ -245,4 +242,9 @@ p{
   width: 40%;
   align-items: center;
   margin-left: 10%;
+}
+
+#meme{
+  width: 173px;
+  height: 249px;
 }
