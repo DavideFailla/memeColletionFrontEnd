@@ -49,7 +49,16 @@ export const getAlbum = async (albumEdition) => {
 }
 
 export const getDuplicates = async () => {
-    const response = await axios.get('http://localhost:8080/api/cards/findInDuplicates',{
+    const response = await axios.get('http://localhost:8080/api/cards/duplicates',{
+        headers:{
+            Authorization : `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return response.data;
+}
+
+export const getMemes = async () => {
+    const response = await axios.get('http://localhost:8080/api/cards/memes',{
         headers:{
             Authorization : `Bearer ${localStorage.getItem("token")}`,
         },

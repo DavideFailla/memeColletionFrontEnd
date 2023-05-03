@@ -249,16 +249,16 @@ p{
   height: 249px;
 }
 
-#login-button{
+.login-button{
   color: #000000;
 }
 
-#login-button:hover{
+.login-button:hover{
   color: #ff0000;
   
 }
 
-#login-form{
+.login-form{
   border-style:solid;
   border-color:#ff0000;
   border-radius: 5%;
@@ -269,7 +269,7 @@ p{
   position: relative;
   text-align: center;
   background-color: #e2dede;
-  
+  margin: auto;
 }
 
 #register-div{
@@ -291,18 +291,30 @@ p{
 
 .login-form-input{
   display: flex;
-  background-color: white;
   cursor: pointer;
   text-align: left;
   width: 70% ;
   padding: 10px 10px;
   align-items: center;
-  text-align: center;
-  
+  margin: auto;
+  color: black;
+  background-color: white;
 }
 
 
 
 .login-form-input :focus{
   transition: width 0.5s ease-in-out;
+}
+
+#pack-cards{
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  border-left: 50%;
+  border-style: solid;
+  border-radius: 5%;
+  border-width: 0.5px;
+  border-color: red;
+  width: 45%;
 }

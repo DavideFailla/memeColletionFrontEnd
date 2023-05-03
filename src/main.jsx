@@ -20,6 +20,7 @@ import Album, {
 import Albums from './components/albums'
 import ErrorPage from './components/error-page'
 import Pack, { packLoader } from './components/pack'
+import Memes, { memeLoader } from './components/memes'
 
 
 
@@ -63,6 +64,12 @@ const router = createBrowserRouter([
         element: <Duplicates/>,
         loader : duplicateLoader,
         errorElement : <div>Non ci sono duplicati!</div>
+      },
+      {
+        path: "/memes",
+        element: <Memes/>,
+        loader: memeLoader,
+        errorElement : ErrorPage,
       },
       {
         path: "/albums",

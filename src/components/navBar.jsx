@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { getDuplicates } from "../api";
+import { getDuplicates, getMemes } from "../api";
 
 
 export default function NavBar(){
@@ -42,6 +42,18 @@ export default function NavBar(){
                     : ""
               }
             >SHOP</NavLink>
+          </li>
+          <li onClick={getMemes}>
+            <NavLink
+              to="/memes"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "active"
+                  : isPending
+                    ? "pending"
+                    : ""
+              }
+            >CARTE</NavLink>
           </li>
           <li>
             <NavLink

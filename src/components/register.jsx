@@ -39,14 +39,14 @@ export default function Register(){
     }
 
     return(
-        <Form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Inserisci il tuo nome" value={firstname} onChange={changeFirstname}></input>
-            <input type="text" placeholder="Inserisci il tuo cognome" value={lastname} onChange={changeLastname}></input>
-            <input type="date" placeholder="Inserisci la tua data di nascita" value={dob} onChange={changeDob}></input>
-            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}></input>
-            <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword}></input>
-            <input type="text" placeholder="Inserisci il tuo nickname" value={nickname} onChange={changeNickname}></input>
-            <button type="submit">Conferma</button>
+        <Form onSubmit={handleSubmit} className="login-form">
+            <input type="text" placeholder="Inserisci il tuo nome" value={firstname} onChange={changeFirstname} className="login-form-input"></input>
+            <input type="text" placeholder="Inserisci il tuo cognome" value={lastname} onChange={changeLastname}className="login-form-input"></input>
+            <input type="date" placeholder="Inserisci la tua data di nascita" value={dob} onChange={changeDob}className="login-form-input"></input>
+            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}className="login-form-input"></input>
+            <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword}className="login-form-input"></input>
+            <input type="text" placeholder="Inserisci il tuo nickname" value={nickname} onChange={changeNickname}className="login-form-input"></input>
+            <button type="submit" className="login-button">Conferma</button>
         </Form>
     )
 }

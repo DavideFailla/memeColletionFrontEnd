@@ -1,4 +1,4 @@
-import { Form, NavLink } from "react-router-dom";
+import { Form, NavLink, Outlet } from "react-router-dom";
 import { authenticate } from "../api";
 import { useState } from "react";
 
@@ -21,17 +21,20 @@ export default function Login(){
 
     return(
         <>
-            <Form onSubmit={handleSubmit} id="login-form" >
+            <Form onSubmit={handleSubmit} className="login-form" >
                 <label for="e-mail">E-mail</label>
                 <input type="email" placeholder="Inserisci la tua e-mail..." value={email} onChange={changeEmail} className="login-form-input">
                 </input>
                 <label for="password">Password</label>
                 <input type="password" placeholder="Inserisci la tua password..." value={password} onChange={changePassword} className="login-form-input">
                 </input>
-                <button type="submit" id="login-button">Accedi</button>
+                <button type="submit" className="login-button">Accedi</button>
                 <div id="register-div">
                 <p>Non sei ancora iscritto?</p>
-                <button><NavLink to ="/register"></NavLink>Registrati</button>
+                <button onClick={event => window.location.href='/register'}>Registrati</button>
+            </div>
+            <div>
+            <Outlet></Outlet>
             </div>
             </Form>
             
