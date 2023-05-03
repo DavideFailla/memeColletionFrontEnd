@@ -248,3 +248,61 @@ p{
   width: 173px;
   height: 249px;
 }
+
+#login-button{
+  color: #000000;
+}
+
+#login-button:hover{
+  color: #ff0000;
+  
+}
+
+#login-form{
+  border-style:solid;
+  border-color:#ff0000;
+  border-radius: 5%;
+  border-width:0.5px;
+  width: 50%;
+  margin-top: 5%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  background-color: #e2dede;
+  
+}
+
+#register-div{
+  align-items: center;
+}
+
+#register-div p{
+  
+  width: 100%;
+}
+
+#register-div button{
+  color: #000000;
+}
+
+#register-div:hover{
+  color: #ff0000;
+}
+
+.login-form-input{
+  display: flex;
+  background-color: white;
+  cursor: pointer;
+  text-align: left;
+  width: 70% ;
+  padding: 10px 10px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+
+
+.login-form-input :focus{
+  transition: width 0.5s ease-in-out;
+}

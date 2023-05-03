@@ -8,7 +8,7 @@ export default function Header(){
         <Link to="/home"><img id="logo-sito" src="./src/images/logo.png" alt="logo" /></Link>
         <NavBar/>
         <button>
-        <Link to="/login" id="logout-link">LOGOUT</Link>
+        <Link to="/login" id="logout-link">LOGIN</Link>
         </button>
         </header>
         </>
