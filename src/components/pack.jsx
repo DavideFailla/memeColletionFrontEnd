@@ -1,33 +1,21 @@
-import { createPack} from "../api"
+import { NavLink, useLoaderData } from "react-router-dom";
+import { createPack } from "../api";
+import ShowCard from "./showCard";
+
+export async function packLoader({params}){
+    const cards = await createPack(params.edition);
+    return {cards};
+}
 
 export default function Pack(){
+    const {cards} = useLoaderData();
+    const results = cards.map((card) =>
+    <ShowCard key={card.id} card = {card}> </ShowCard>
+    );
 
-    function ogPack(){
-        createPack("OG", "150");
-    }
-
-    function genZPack(){
-        createPack("GEN_Z", "150");
-    }
-
-    return(
-
-        <div id="pack-grid">
-            <div className="pack-grid-div"> 
-            <img className="pack-images" src="./src/images/OG-PACK.jpg" alt="OG PACK"></img>
-            <p>Acquista il pacchetto di carte dell'edizione OG a soli 2.99$</p>
-            <button type="button" className="pack-button" onClick={ogPack}>
-                ACQUISTA OG PACK
-            </button>
-            </div>
-            <div className="pack-grid-div">
-            <img className="pack-images" src="./src/images/GEN_Z-PACK.jpg" alt="GEN_Z PACK"></img>
-            <p>Acquista il pacchetto di carte dell'edizione GEN_Z a soli 2.99$</p>
-            <button type="button" className="pack-button" onClick={genZPack}>
-                ACQUISTA GEN_Z PACK
-            </button>
-            </div>
-           
+    return (
+        <div id="pack-cards">
+            {results}
         </div>
-    )
+    );
 }

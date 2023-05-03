@@ -22,7 +22,7 @@ export const register = async (firstname, lastname, dob, email, password, nickna
     localStorage.setItem("token",response.data.access_token);
 };
 
-export const createPack = async (stringPackEdition, stringPackCost) => {
+export const createPack = async (stringPackEdition) => {
     const response = await axios.post('http://localhost:8080/api/players/pack',{
     },
     {
@@ -31,7 +31,6 @@ export const createPack = async (stringPackEdition, stringPackCost) => {
         },
         params: {
             stringPackEdition : stringPackEdition,
-            stringPackCost : stringPackCost,
         }
     });
     return response.data;
