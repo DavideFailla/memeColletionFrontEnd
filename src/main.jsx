@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />
+        element: <Login />,
+        errorElement: <div>Email o password errati</div>
       },
       {
         path: "/register",

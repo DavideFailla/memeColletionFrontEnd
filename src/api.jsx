@@ -7,6 +7,7 @@ export const authenticate = async (email, password) => {
         "password": `${password}`,
     });
     localStorage.setItem("token",response.data.access_token);
+    return response.status;
 }
 
 export const register = async (firstname, lastname, dob, email, password, nickname) => {
@@ -48,10 +49,16 @@ export const getAlbum = async (albumEdition) => {
     return response.data;
 }
 
-export const getDuplicates = async () => {
+export const getDuplicates = async (edition, cardName, funLevel, rarity) => {
     const response = await axios.get('http://localhost:8080/api/cards/duplicates',{
         headers:{
             Authorization : `Bearer ${localStorage.getItem("token")}`,
+        },
+        params :{
+            edition : edition,
+            cardName : cardName,
+            funLevel : funLevel,
+            rarity : rarity,
         },
     });
     return response.data;

@@ -20,7 +20,6 @@ export default function Login(){
     }
 
     return(
-        <>
             <Form onSubmit={handleSubmit} className="login-form" >
                 <label for="e-mail">E-mail</label>
                 <input type="email" placeholder="Inserisci la tua e-mail..." value={email} onChange={changeEmail} className="login-form-input">
@@ -37,7 +36,5 @@ export default function Login(){
             <Outlet></Outlet>
             </div>
             </Form>
-            
-        </>
     )
 }
