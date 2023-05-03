@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 import Login from './components/login'
 import Register from './components/register'
-import Pack from './components/pack'
+import Packs from './components/packs'
 
 import Root from './components/root'
 import Home from './components/home'
@@ -19,6 +19,7 @@ import Album, {
 } from './components/Album'
 import Albums from './components/albums'
 import ErrorPage from './components/error-page'
+import Pack, { packLoader } from './components/pack'
 
 
 
@@ -43,7 +44,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/pack",
-        element: <Pack />
+        element: <Packs/>,
+        errorElement: ErrorPage,
+        children : [
+          {
+            path: "/pack/:edition",
+            element : <Pack/>,
+            loader : packLoader,
+          },
+        ],
       },
       {
         path: "/contacts",
@@ -69,7 +78,6 @@ const router = createBrowserRouter([
         ],
       },
     ],
-
   },
 ]);
 
