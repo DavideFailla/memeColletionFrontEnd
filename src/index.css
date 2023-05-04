@@ -137,14 +137,24 @@ ul{
 }
 
 .login-form{
-
-  margin-top: 20%;
-  margin-left: 20%;
+  margin:auto;
   position: relative;
   align-items: center;
   justify-content: space-between;
+
 }
 
+.login-form-input{
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  width: 70% ;
+  padding: 10px 10px;
+  align-items: center;
+  margin: auto;
+  color: black;
+  background-color: white;
+}
 
 
 .albums-button{
@@ -195,26 +205,14 @@ header{
   color:#f20404
 }
 
-#img1-home{
-  
-  width: 60%;
-  margin-top: 10%;
-  margin-left: 30%;
-  align-items: center;
-}
 
-#grid{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
- 
 
-}
+
 
 h2{
   margin: 0;
   padding: 0;
-
+  font-size: 40px;
 }
 
 h3{
@@ -231,9 +229,34 @@ p{
   color: #000107;
 }
 
+#grid{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+
+#img1-home{
+  width: 100%;
+ margin: auto;
+  text-align: center;
+  margin-left: 10%;
+}
+
 #text-div-1{
  justify-content: space-between;
  align-items: center;
+ text-align: center;
+ 
+ padding: 0;
+}
+
+#text-div-1 p {
+  margin: auto;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -241,7 +264,13 @@ p{
   background-color: #ffffff;
   border-color: #000000;
   color: #000107;
-  margin-left: 20%;
+  margin:auto;
+
+  
+}
+
+.info-button:hover{
+  color: #ed0000;
 }
 
 #pack-grid{
@@ -316,17 +345,7 @@ p{
   color: #ff0000;
 }
 
-.login-form-input{
-  display: flex;
-  cursor: pointer;
-  text-align: left;
-  width: 70% ;
-  padding: 10px 10px;
-  align-items: center;
-  margin: auto;
-  color: black;
-  background-color: white;
-}
+
 
 
 
@@ -405,4 +424,52 @@ p{
 
 #search-button:hover{
   color: #f20404;
+}
+
+.meme-div{
+  margin-left: 20%;
+  margin-right: 20%;
+  align-items: center;
+  text-align: center;
+}
+
+#meme-rules-div{
+  display: flex;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#h2-home{
+  text-align: center;
+}
+
+.meme-rules-1{
+  margin: auto;
+  text-align: center;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.img2-home{
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 200px;
+}
+
+.img2-home:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  height: 202px;
+  transition: width 0.5s ease-in-out;
+}
+
+h4{
+  text-align: center;
+  margin: auto;
 }

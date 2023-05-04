@@ -79,7 +79,7 @@ export default function Duplicates(){
             </select>
             <button id="search-button">Cerca</button>
         </Form>
-        <div>
+        <div className="meme-div">
             {results}
         </div>
         </>

@@ -14,7 +14,7 @@ export default function Album(){
     <ShowCard key={card.id} card = {card}> </ShowCard>
     );
     return (
-        <div>
+        <div className="meme-div">
             {results}
         </div>
     );

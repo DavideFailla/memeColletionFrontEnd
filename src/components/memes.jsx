@@ -15,7 +15,7 @@ export default function Memes(){
     <ShowCard key={card.id} card = {card}> </ShowCard>
     );
     return (
-        <div>
+        <div className="meme-div">
             {results}
         </div>
     );
