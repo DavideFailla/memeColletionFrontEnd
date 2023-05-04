@@ -36,17 +36,19 @@ footer{
   position:relative;
   bottom:0;
   left:0;
+  width: 100%;
   background-color: #268570;
   height: 10%;
-  width: 100%;
+ 
   display: flex;
   justify-content: space-around;
 }
 
 main{
+  position:relative;
   background-color: #ffffff;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
@@ -88,6 +90,20 @@ button:focus-visible {
   display: inline-block;
   margin-right: 20px;
   margin-left: 50px;
+}
+
+.card-meme img{
+  transition: all 300ms ease-in-out;
+  border: 3px solid black;
+
+
+
+}
+
+.card-meme img:hover{
+  transform: scale(1.1);
+  border: 3px solid #ed0000;
+  box-shadow: 1px 1px 10px 6px black;
 }
 
 #nav-bar{
@@ -201,6 +217,12 @@ h2{
 
 }
 
+h3{
+  margin: 0;
+  padding: 0;
+  margin: auto;
+}
+
 p{
   margin: 0;
   line-height: 1.4;
@@ -226,8 +248,13 @@ p{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+#pack-grid p{
+  
+  width: 100%;
 }
 
 .pack-grid-div{
@@ -241,7 +268,7 @@ p{
 .pack-images{
   width: 40%;
   align-items: center;
-  margin-left: 10%;
+  margin:auto
 }
 
 #meme{
@@ -309,37 +336,73 @@ p{
 
 #pack-cards{
   text-align: center;
-  align-items: center;
   margin: auto;
-  border-left: 50%;
-  border-style: solid;
-  border-radius: 5%;
-  border-width: 0.5px;
-  border-color: red;
-  width: 45%;
+  margin-top:  5%;
 }
 
 #album-grid{
  display: flex;
  justify-content: space-between;
  padding: 0;
- margin-top: 10%;
+ margin-top: 5%;
+ margin-bottom: 5%;
 }
+
+
 
 .album-img-link{
   margin: auto;
   width: 30%;
-  height: 40vh;
+  height: 38vh;
   display: flex;
   justify-content: center;
 }
 
 .album-img-link img{
   width: fit-content;
-  height: 100%;
+  height:300px;
 }
 
 .album-img-link:hover{
-  height: 42vh;
+  transform: scale(1.1);
+  height: 302px;
   transition: width 0.5s ease-in-out;
+}
+
+#searc-duplicates-form{
+  border-style:solid;
+  border-color: #ed0000;
+  border-width:0.5px;
+  display: flex;
+  margin: auto;
+  width: 80%;
+  background-color: #e2dede;
+  height: 100px;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 8px 4px rgb(36, 30, 30);
+}
+
+.search-form-input{
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 9px 9px;
+  
+}
+
+.search-form-input :focus{
+  transition: width 0.5s ease-in-out;
+}
+
+#search-button{
+  color:black;
+  height: 45px;
+  margin: auto;
+  
+}
+
+#search-button:hover{
+  color: #f20404;
 }
