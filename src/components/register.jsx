@@ -40,11 +40,17 @@ export default function Register(){
 
     return(
         <Form onSubmit={handleSubmit} className="login-form">
+            <label>Nome</label>
             <input type="text" placeholder="Inserisci il tuo nome" value={firstname} onChange={changeFirstname} className="login-form-input"></input>
+            <label>Cognome</label>
             <input type="text" placeholder="Inserisci il tuo cognome" value={lastname} onChange={changeLastname}className="login-form-input"></input>
+            <label>Data di Nascita</label>
             <input type="date" placeholder="Inserisci la tua data di nascita" value={dob} onChange={changeDob}className="login-form-input"></input>
-            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}className="login-form-input"></input>
+            <label>Email</label>
+            <input type="email" placeholder="Inserisci la tua e-mail" value={email} onChange={changeEmail}className="login-form-input"></input>
+            <label>Password</label>
             <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword}className="login-form-input"></input>
+            <label>Nickname</label>
             <input type="text" placeholder="Inserisci il tuo nickname" value={nickname} onChange={changeNickname}className="login-form-input"></input>
             <button type="submit" className="login-button">Conferma</button>
         </Form>

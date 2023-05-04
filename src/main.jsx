@@ -16,7 +16,7 @@ import Duplicates, { duplicateLoader } from './components/duplicates'
 import ShowAlbum from './components/showCard'
 import Album, {
   albumLoader
-} from './components/Album'
+} from './components/album'
 import Albums from './components/albums'
 import ErrorPage from './components/error-page'
 import Pack, { packLoader } from './components/pack'

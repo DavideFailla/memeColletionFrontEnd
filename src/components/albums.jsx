@@ -13,13 +13,16 @@ export default function Albums(){
 
     return(
         <>
-        <div >
-            <button type="button" onClick={ogAlbum} className="albums-button">
-            <NavLink to ="/albums/OG">OG ALBUM</NavLink>
-            </button>
-            <button type="button" onClick={gen_zAlbum} className="albums-button">
-            <NavLink to ="/albums/GEN_Z">GEN_Z ALBUM</NavLink>
-            </button>
+        <div id="album-grid">
+            
+            <NavLink to ="/albums/OG" className="album-img-link"><img src="./src/images/OGALBUM.png" onClick={ogAlbum}/></NavLink>
+           
+
+            
+            
+           
+            <NavLink to ="/albums/GEN_Z" className="album-img-link"><img src="./src/images/GEN_ZALBUM.png"  onClick={gen_zAlbum}></img> </NavLink>
+            
         </div>
         <div>
             <Outlet/>

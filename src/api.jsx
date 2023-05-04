@@ -7,6 +7,7 @@ export const authenticate = async (email, password) => {
         "password": `${password}`,
     });
     localStorage.setItem("token",response.data.access_token);
+    localStorage.setItem("user",response.data.nickname);
     return response.status;
 }
 
@@ -21,6 +22,7 @@ export const register = async (firstname, lastname, dob, email, password, nickna
         "nickname" : `${nickname}`,
     });
     localStorage.setItem("token",response.data.access_token);
+    localStorage.setItem("user",response.data.nickname);
 };
 
 export const createPack = async (stringPackEdition) => {
