@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { register } from "../api";
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 
 export default function Register(){
     const[firstname, setFirstname] = useState("");
@@ -9,9 +9,11 @@ export default function Register(){
     const[email, setEmail] = useState("");
     const[password, setPassword] = useState("");
     const[nickname, setNickname] = useState("");
+    const navigate = useNavigate();
 
     function handleSubmit(){
         register(firstname, lastname, dob, email, password, nickname);
+        navigate("/home");
     }
 
     function changeFirstname(e){
