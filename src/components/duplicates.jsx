@@ -46,12 +46,13 @@ export default function Duplicates(){
 
     return (
         <>
-        <Form onSubmit={handleSubmit}>
-            <h3>Ricerca per</h3>
-            <label>Nome:</label>
-            <input type="text" onChange={changeText} value={cardName}></input>
-            <label>Fun Level:</label>
-            <select onChange={changeFunLevel} value={funLevel}>
+        <Form onSubmit={handleSubmit} id="searc-duplicates-form">
+            <h3>Ricerca:</h3>
+            
+            <input type="text" onChange={changeText} value={cardName} placeholder="Inserisci nome..." className="search-form-input"></input>
+            
+            <select onChange={changeFunLevel} value={funLevel} placeholder="Fun Level" className="search-form-input">
+                <option value={""}>Fun Level</option>
                 <option></option>
                 <option>PATHETIC</option>
                 <option>BASIC</option>
@@ -59,14 +60,16 @@ export default function Duplicates(){
                 <option>LMAO</option>
                 <option>RIP</option>
             </select>
-            <label>Edizione:</label>
-            <select onChange={changeEdition} value={edition}>
+            
+            <select onChange={changeEdition} value={edition} className="search-form-input">
+                <option value={""}>Edition</option>
                 <option></option>
                 <option>OG</option>
                 <option>GENZ</option>
             </select>
-            <label>Rarità:</label>
-            <select onChange={changeRarity} value={rarity}>
+           
+            <select onChange={changeRarity} value={rarity} className="search-form-input">
+                <option value={""}>Rarity</option>
                 <option></option>
                 <option>COMMON</option>
                 <option>UNCOMMON</option>
@@ -74,7 +77,7 @@ export default function Duplicates(){
                 <option>EPIC</option>
                 <option>LEGENDARY</option>
             </select>
-            <button>Cerca</button>
+            <button id="search-button">Cerca</button>
         </Form>
         <div>
             {results}
