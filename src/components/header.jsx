@@ -15,9 +15,7 @@ export default function Header(){
         <header>
             <Link to="/home"><img id="logo-sito" src="./src/images/logo.png" alt="logo" /></Link>
         <NavBar/>
-        
-        <p>Benvenuto, {result.nickname}</p>
-        
+       
         <button>
             <Link to="/login" id="logout-link">LOGIN</Link>
         </button>

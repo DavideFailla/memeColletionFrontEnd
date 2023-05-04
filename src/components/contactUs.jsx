@@ -14,11 +14,11 @@ export default function ContactUs(){
     }
 
     return(
-        <Form id="contact-form">
+        <Form className="login-form">
             <label>Inserisci la tua Email</label>
-            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail}></input>
+            <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail} className="login-form-input"></input>
             <label>Inserisci il tuo messaggio</label>
-            <input type="text" placeholder="Scrivi il tuo messaggio" value={text} onChange={changeText}></input>
+            <input type="text" placeholder="Scrivi il tuo messaggio" value={text} onChange={changeText} className="login-form-input" ></input>
             <button type="submit" id="contact-button">Conferma</button>
         </Form>
     )
