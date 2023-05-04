@@ -7,7 +7,7 @@ export const authenticate = async (email, password) => {
         "password": `${password}`,
     });
     localStorage.setItem("token",response.data.access_token);
-    localStorage.setItem("user",response.data.nickname);
+    
     return response.status;
 }
 
@@ -22,7 +22,7 @@ export const register = async (firstname, lastname, dob, email, password, nickna
         "nickname" : `${nickname}`,
     });
     localStorage.setItem("token",response.data.access_token);
-    localStorage.setItem("user",response.data.nickname);
+    
 };
 
 export const createPack = async (stringPackEdition) => {
@@ -68,6 +68,15 @@ export const getDuplicates = async (edition, cardName, funLevel, rarity) => {
 
 export const getMemes = async () => {
     const response = await axios.get('http://localhost:8080/api/cards/memes',{
+        headers:{
+            Authorization : `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return response.data;
+}
+
+export const getPlayer = async () => {
+    const response = await axios.get('http://localhost:8080/api/players/player',{
         headers:{
             Authorization : `Bearer ${localStorage.getItem("token")}`,
         },
