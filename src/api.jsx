@@ -71,11 +71,7 @@ export const getDuplicates = async (edition, cardName, funLevel, rarity) => {
 }
 
 export const getMemes = async () => {
-    const response = await axios.get('http://localhost:8080/api/cards/memes',{
-        headers:{
-            Authorization : `Bearer ${localStorage.getItem("token")}`,
-        },
-    });
+    const response = await axios.get('http://localhost:8080/api/cards/memes',);
     return response.data;
 }
 
