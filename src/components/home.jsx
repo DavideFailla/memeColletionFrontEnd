@@ -10,7 +10,7 @@ export default function Home(){
     const navigate = useNavigate();
 
     function handleClick1(){
-        navigate("/register")
+        navigate("/memes")
     }
     function handleClick2(){
         navigate("/pack")
@@ -34,7 +34,7 @@ export default function Home(){
         <h2 id="h2-home"> Come funziona Me-Merenda</h2>
         <div id="meme-rules-div">
             <div className="meme-rules-1">
-                <h4> Step 1. <br></br> Registrati al sito!</h4>
+                <h4> Step 1. <br></br> Scopri un mondo nuovo!</h4>
                 <img className="img2-home" src={Sponge} alt="img1" onClick={handleClick1}></img>
             </div>
             <div className="meme-rules-1">

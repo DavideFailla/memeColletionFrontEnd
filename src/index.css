@@ -188,18 +188,7 @@ header{
   align-items: center;
 }
 
-.pack-button{
-  color:black;
-  display: inline;
-  align-items: center;
-  justify-content: space-around;
-  margin: 10%;
-}
 
-.pack-button :hover{
-  color:#f20404;
-  
-}
 
 #contact-button{
   color: black;
@@ -289,26 +278,37 @@ p{
   align-items: center;
   margin: auto;
   margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-#pack-grid p{
-  margin: 2%;
-  width: 100%;
-}
 
 .pack-grid-div{
-  border-style:solid;
-  border-color:#ff0000;
-  border-radius: 5%;
-  border-width:0.5px;
   align-items: center;
   text-align: center;
 }
 .pack-images{
-  width: 40%;
+  width: 50%;
+  height: 500px;
   align-items: center;
   margin:auto
 }
+
+.pack-button{
+  border-color: #000000;
+  border-width:  3px;
+  color:black;
+  display: inline;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10%;
+  line-height: 1.5;
+}
+
+.pack-button :hover{
+  color:#f20404;
+}
+
 
 #meme{
   width: 173px;
