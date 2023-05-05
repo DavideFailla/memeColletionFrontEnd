@@ -12,7 +12,7 @@ export async function memeLoader(){
 export default function Memes(){
     const {cards} = useLoaderData();
     const results = cards.map((card) =>
-    <ShowCard key={card.id} card = {card}> </ShowCard>
+    <ShowCard key={card.id} card = {card} name={card.name}> </ShowCard>
     );
     return (
         <div className="meme-div">

@@ -11,6 +11,10 @@ export const authenticate = async (email, password) => {
     return response.status;
 }
 
+export const logout = async () => {
+    const response = await axios.post('http://localhost:8080/api/auth/logout');
+}
+
 export const register = async (firstname, lastname, dob, email, password, nickname) => {
     const response = await axios.post('http://localhost:8080/api/auth/register',
     {
@@ -77,6 +81,15 @@ export const getMemes = async () => {
 
 export const getPlayer = async () => {
     const response = await axios.get('http://localhost:8080/api/players/player',{
+        headers:{
+            Authorization : `Bearer ${localStorage.getItem("token")}`,
+        },
+    });
+    return response.data;
+}
+
+export const getMemeNames = async (albumEdition) => {
+    const response = await axios.get(`http://localhost:8080/api/cards/${albumEdition}/memeNames`,{
         headers:{
             Authorization : `Bearer ${localStorage.getItem("token")}`,
         },
