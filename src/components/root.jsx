@@ -6,16 +6,13 @@ import { getPlayer } from "../api";
 import { useEffect, useState } from "react";
 
 export default function Root(){
-    console.log("rendering root");
     const[nickname, setNickname] = useState("");
     const[money, setMoney] = useState("");
-    const[balanceModified, setBalanceModified] = useState(false);
 
     async function loadPlayerDetails () {
         const result = await getPlayer();
         setNickname(result.nickname);
         setMoney(result.money);
-        console.log(result.money);
     }
 
     function reset(){
