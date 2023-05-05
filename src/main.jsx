@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/login",
+        index: true,
         element: <Login />,
         errorElement: <div>Email o password errati</div>
       },

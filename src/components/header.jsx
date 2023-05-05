@@ -18,7 +18,7 @@ export default function Header(){
         <NavBar/>
 
         <button>
-            <Link to="/login" id="logout-link">LOGIN</Link>
+            <Link to="" id="logout-link">LOGIN</Link>
         </button>
        
         </header>
