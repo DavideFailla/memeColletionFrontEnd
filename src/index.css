@@ -93,10 +93,15 @@ button:focus-visible {
 
 .card-meme{
   display: inline-block;
-  margin-right: 20px;
-  margin-left: 50px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
+.card-meme p{
+  font-size: 9px ;
+  background-color: aqua;
+  margin-right: 0;
+}
 .card-meme img{
   transition: all 300ms ease-in-out;
   border: 3px solid black;
@@ -141,24 +146,28 @@ ul{
   width: 200px;
 }
 
-.login-form{
-  margin:auto;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-
-}
-
 .login-form-input{
   display: flex;
   cursor: pointer;
   text-align: left;
-  width: 70% ;
+  width: 50% ;
   padding: 10px 10px;
   align-items: center;
   margin: auto;
   color: black;
   background-color: white;
+}
+
+#text-form-input{
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+ 
+  padding: 10px 10px;
+  margin: auto;
+  color: black;
+  background-color: white;
+  resize: none;
 }
 
 
@@ -329,7 +338,7 @@ p{
   border-color:#ff0000;
   border-radius: 5%;
   border-width:0.5px;
-  width: 50%;
+  width: 30%;
   margin-top: 5%;
   align-items: center;
   position: relative;
@@ -385,6 +394,7 @@ p{
   height: 38vh;
   display: flex;
   justify-content: center;
+
 }
 
 .album-img-link img{
@@ -437,8 +447,8 @@ p{
 }
 
 .meme-div{
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 18%;
+  margin-right: 18%;
   align-items: center;
   text-align: center;
 }
@@ -484,4 +494,10 @@ h4{
   line-height: 1.4;
   margin: auto;
   margin-bottom: 5%;
+}
+
+.welcome-p{
+  margin:auto;
+  margin-left: 0;
+  margin-right: 0;
 }

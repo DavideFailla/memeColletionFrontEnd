@@ -15,12 +15,10 @@ export default function ContactUs(){
 
     return(
         <Form className="login-form">
-            <label>Inserisci la tua Email</label>
+            <label>E-mail</label>
             <input type="email" placeholder="Inserisci la mail" value={email} onChange={changeEmail} className="login-form-input"></input>
-            <label>Inserisci il tuo messaggio</label>
-
-
-            <input type="text" placeholder="Scrivi il tuo messaggio" value={text} onChange={changeText} className="login-form-input"></input>
+            <label>Testo</label>
+            <textarea type="text" placeholder="Scrivi il tuo messaggio..." value={text} onChange={changeText} id="text-form-input"></textarea>
             <button type="submit" className="pack-button">Invia</button>
 
         </Form>

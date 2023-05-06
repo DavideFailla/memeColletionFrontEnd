@@ -26,7 +26,7 @@ export default function Header({nickname, money, reset}){
             <Link to="/home"><img id="logo-sito" src={Logo} alt="logo"/></Link>
         <NavBar/>
 
-        {nickname ? <p> Benvenuto, {nickname} {money} Me-Monete</p> : <p>Benvenuto</p>}
+        {nickname ? <p className="welcome-p"> Benvenuto, {nickname} <br></br> Me-Monete: {money} </p> : <p className="welcome-p">Benvenuto</p>}
         {nickname ? <button onClick={handleLogout}><p>LOGOUT</p></button> : <button onClick={handleLogin}><p>LOGIN</p></button>}
         </header>
 
