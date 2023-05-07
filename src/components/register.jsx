@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { register } from "../api";
-import { Form, useNavigate, useOutletContext } from "react-router-dom";
+import { Form, Outlet, useNavigate, useOutletContext } from "react-router-dom";
 
 export default function Register(){
     const[firstname, setFirstname] = useState("");
@@ -12,8 +12,8 @@ export default function Register(){
     const {loadPlayerDetails} = useOutletContext();
     const navigate = useNavigate();
 
-    function handleSubmit(){
-        register(firstname, lastname, dob, email, password, nickname);
+    async function handleSubmit(){
+        await register(firstname, lastname, dob, email, password, nickname);
         loadPlayerDetails();
         navigate("/home");
     }
@@ -43,20 +43,20 @@ export default function Register(){
     }
 
     return(
-        <Form className="login-form">
-            <label>Nome</label>
+        <Form className="login-form" onSubmit={handleSubmit}>
+            <label htmlFor="text">Nome</label>
             <input type="text" placeholder="Inserisci il tuo nome" value={firstname} onChange={changeFirstname} className="login-form-input"></input>
-            <label>Cognome</label>
+            <label htmlFor="text">Cognome</label>
             <input type="text" placeholder="Inserisci il tuo cognome" value={lastname} onChange={changeLastname}className="login-form-input"></input>
-            <label>Data di Nascita</label>
+            <label htmlFor="date">Data di Nascita</label>
             <input type="date" placeholder="Inserisci la tua data di nascita" value={dob} onChange={changeDob}className="login-form-input"></input>
-            <label>Email</label>
+            <label htmlFor="e-mail">Email</label>
             <input type="email" placeholder="Inserisci la tua e-mail" value={email} onChange={changeEmail}className="login-form-input"></input>
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" placeholder="Inserisci la password" value={password} onChange={changePassword}className="login-form-input"></input>
-            <label>Nickname</label>
+            <label htmlFor="text">Nickname</label>
             <input type="text" placeholder="Inserisci il tuo nickname" value={nickname} onChange={changeNickname}className="login-form-input"></input>
-            <button type="submit" className="login-button" onClick={handleSubmit}>Conferma</button>
+            <button type="submit" className="login-button">Conferma</button>
         </Form>
     )
 }
