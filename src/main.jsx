@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Login />,
-        errorElement: <div>Email o password errati</div>
+        errorElement: <div className='error-element'>Email o password errati! <br></br> Per favore riprova.</div>
       },
       {
         path: "/register",
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
         path: "/duplicates",
         element: <Duplicates/>,
         loader : duplicateLoader,
-        errorElement : <div>Non ci sono duplicati!</div>
+        errorElement : <div className='error-element'>Non sono presenti duplicati!</div>
       },
       {
         path: "/memes",
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
             path: "/albums/:edition",
             element: <Album/>,
             loader: albumLoader,
-            errorElement : <div>Album vuoto!</div>
+            errorElement : <div className='error-element'>L'album selezionato è al momento vuoto! <br></br> Acquista un pacchetto per iniziare la collezione!</div>
           },
         ],
       },

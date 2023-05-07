@@ -6,8 +6,8 @@ export default function ErrorPage(){
     console.error(error);
 
     return(
-        <div id="error-page">
-            <p>C'è stato un errore imprevisto!</p>
+        <div className='error-element'>
+            C'è stato un errore imprevisto!
         </div>
     )
 }
