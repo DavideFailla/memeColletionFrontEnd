@@ -53,7 +53,6 @@ export default function Duplicates(){
             
             <select onChange={changeFunLevel} value={funLevel} placeholder="Fun Level" className="search-form-input">
                 <option value={""}>Fun Level</option>
-                <option></option>
                 <option>PATHETIC</option>
                 <option>BASIC</option>
                 <option>LOL</option>
@@ -63,14 +62,12 @@ export default function Duplicates(){
             
             <select onChange={changeEdition} value={edition} className="search-form-input">
                 <option value={""}>Edition</option>
-                <option></option>
                 <option>OG</option>
                 <option>GENZ</option>
             </select>
            
             <select onChange={changeRarity} value={rarity} className="search-form-input">
                 <option value={""}>Rarity</option>
-                <option></option>
                 <option>COMMON</option>
                 <option>UNCOMMON</option>
                 <option>RARE</option>
